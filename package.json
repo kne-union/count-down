@@ -1,7 +1,7 @@
 {
   "name": "@kne/count-down",
   "version": "0.1.0",
-  "description": "显示倒计时",
+  "description": "显示倒计时.",
   "syntax": {
     "esmodules": true
   },

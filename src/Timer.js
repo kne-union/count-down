@@ -13,7 +13,7 @@ const Timer = forwardRef(({ start = 0, duration = 0, autoplay = true, unit = 'se
   useImperativeHandle(ref, () => {
     return {
       restart: () => {
-        setTime(0);
+        setTime(start);
         setIsPause(false);
       },
       pause: () => {

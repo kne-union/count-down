@@ -2,8 +2,8 @@ import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from 're
 import useRefCallback from '@kne/use-ref-callback';
 import dayjs from 'dayjs';
 
-const Timer = forwardRef(({ duration = 0, autoplay = true, unit = 'seconds', format = 'mm:ss', onProgress, onComplete }, ref) => {
-  const [time, setTime] = useState(0);
+const Timer = forwardRef(({ start = 0, duration = 0, autoplay = true, unit = 'seconds', format = 'mm:ss', onProgress, onComplete }, ref) => {
+  const [time, setTime] = useState(start);
   const [isPause, setIsPause] = useState(!autoplay);
   const progressHandler = useRefCallback(onProgress);
   const completeHandler = useRefCallback(onComplete);

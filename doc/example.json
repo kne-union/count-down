@@ -2,16 +2,58 @@
   "isFull": false,
   "list": [
     {
-      "title": "这里填写示例标题",
-      "description": "这里填写示例说明",
+      "title": "基础示例",
+      "description": "展示 CountDown 和 Timer 组件的基本用法",
       "code": "./base.js",
       "scope": [
         {
           "name": "_CountDown",
           "packageName": "@kne/current-lib_count-down",
           "importStatement": "import * as _CountDown from \"@kne/count-down\""
+        },
+        {
+          "name": "antd",
+          "packageName": "antd"
         }
       ]
+    },
+    {
+      "title": "CountDown 示例",
+      "description": "展示 CountDown 倒计时组件的各种用法，包括自定义格式、Ref 控制、回调函数、验证码场景、秒杀活动等",
+      "code": "./count-down.js",
+      "scope": [
+        {
+          "name": "_CountDown",
+          "packageName": "@kne/current-lib_count-down",
+          "importStatement": "import * as _CountDown from \"@kne/count-down\""
+        },
+        {
+          "name": "antd",
+          "packageName": "antd"
+        },
+        {
+          "name": "remoteLoader",
+          "packageName": "@kne/remote-loader"
+        }
+      ]
+    },
+    {
+      "title": "Timer 示例",
+      "description": "展示 Timer 计时器组件的各种用法，包括自定义起始点、设置最大时长、Ref 控制、工作计时器、在线考试等",
+      "code": "./timer.js",
+      "scope": [{
+        "name": "_CountDown",
+        "packageName": "@kne/current-lib_count-down",
+        "importStatement": "import * as _CountDown from \"@kne/count-down\""
+      },
+        {
+          "name": "antd",
+          "packageName": "antd"
+        },
+        {
+          "name": "remoteLoader",
+          "packageName": "@kne/remote-loader"
+        }]
     }
   ]
 }

@@ -5,7 +5,7 @@ import useRefCallback from '@kne/use-ref-callback';
 
 dayjs.extend(duration);
 
-const CountDown = forwardRef(({ duration = 60, autoplay = true, unit = 'seconds', format = 'mm:ss', onProgress, onComplete }, ref) => {
+const CountDown = forwardRef(({ duration = 60, autoplay = true, unit = 'seconds', format = 'mm:ss', onProgress, onComplete, children }, ref) => {
   const [time, setTime] = useState(duration);
   const [isPause, setIsPause] = useState(!autoplay);
   const progressHandler = useRefCallback(onProgress);
@@ -60,7 +60,8 @@ const CountDown = forwardRef(({ duration = 60, autoplay = true, unit = 'seconds'
       };
     }, currentUnit);
   }, [unit]);
-  return dayjs.duration(time, unit).format(format);
+  const timeStr = dayjs.duration(time, unit).format(format);
+  return typeof children === 'function' ? children(timeStr) : timeStr;
 });
 
 export default CountDown;
